@@ -13,14 +13,13 @@ public protocol BlogPostsListDelegate {
     func loadListDetailViewController(postId: Int)
 }
 
-final class NavigationControllerRouter: BlogPostsListDelegate {
-    private let navigationController: UINavigationController
+final class BlogPostsNavigationControllerRouter: NavigationControllerRouter, BlogPostsListDelegate {
     private let factory: ViewControllerFactory
     
     //MARK: Init
     init(navigationController: UINavigationController, factory: ViewControllerFactory) {
-        self.navigationController = navigationController
         self.factory = factory
+        super.init(navigationController: navigationController)
     }
     
     func loadListsViewController(selectionCallBack: @escaping ItemSelection) {
@@ -31,8 +30,4 @@ final class NavigationControllerRouter: BlogPostsListDelegate {
         show(viewController: factory.postDetailViewController(postId: postId))
     }
     
-    //MARK: Private Helpers
-    private func show(viewController: UIViewController)  {
-        navigationController.pushViewController(viewController, animated: true)
-    }
 }

@@ -8,14 +8,13 @@
 import Foundation
 
 public final class BlogListApp {
-    private let flow: Any
+    private let flow: Flow
     
-    private init(flow: Any) {
+    private init(flow: Flow) {
         self.flow = flow
     }
     
-    public static func start(delegate: BlogPostsListDelegate) -> BlogListApp {
-        let flow = Flow(delegate: delegate)
+    public static func start(flow: Flow) -> BlogListApp {
         flow.start()
         return BlogListApp(flow: flow)
     }
@@ -23,16 +22,8 @@ public final class BlogListApp {
 }
 
 
-class Flow {
-    private let delegate: BlogPostsListDelegate
 
-    init(delegate: BlogPostsListDelegate) {
-        self.delegate = delegate
-    }
-    
-    func start() {
-        delegate.loadListsViewController(selectionCallBack: {[unowned self] selectedId in
-            self.delegate.loadListDetailViewController(postId: selectedId)
-        })
-    }
-}
+
+
+
+

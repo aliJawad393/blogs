@@ -18,12 +18,13 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let parser = ParseManager()
         let factory = iOSViewControllerFactory(baseURL: URL(string: "https://techcrunch.com/wp-json/wp/v2")!, parser: parser)
         let navigationController = UINavigationController()
-        let router = NavigationControllerRouter(navigationController: navigationController, factory: factory)
+        let router = LoginNavigationControllerRouter(navigationController: navigationController, factory: factory)
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        app = BlogListApp.start(delegate: router)
+        let signInFlow = FlowSignIn(delegate: LoginNavigationControllerRouter(navigationController: navigationController, factory: factory), nextFlow: FlowBlogsList(delegate: BlogPostsNavigationControllerRouter(navigationController: navigationController, factory: factory)))
+        app = BlogListApp.start(flow: signInFlow)
 
     }
 }

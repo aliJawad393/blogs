@@ -81,4 +81,12 @@ final class iOSViewControllerFactory: ViewControllerFactory {
         let imagePersistaneNetworkComposite = ImageRepositoryComposite(primarySource: imageCachePersistanceComposite, secondarySource: imageNetworkPersistanceDecorator) // first fetch from cache, if fails, fetch from core data, if fails, fetch from server and save to core data
         return imagePersistaneNetworkComposite
     }
+    
+    func loginViewController(signUp: @escaping () -> (), login: @escaping()->()) -> UIViewController {
+        return LoginViewController(signUpBlock: signUp, loginBlock: login)
+    }
+    
+    func signUpViewController(signUpBlock: @escaping(UserCredentials)->()) -> UIViewController {
+        return SignUpViewController(builder: UserCrendentialsBuilder(), signUpBlock: signUpBlock)
+    }
 }
