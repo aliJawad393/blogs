@@ -21,26 +21,26 @@ final class PostCoreDataService: PostRepository, PostPersistance {
         fatalError("Can't be Initialized without Required parameters")
     }
     
-    public func savePost(_ post: Post) {
+    func savePost(_ post: Post) {
         savePostInCoreData(post)
         managedObjectContext.saveContext()
     }
     
-    public func savePosts(_ posts: [Post]) {
+    func savePosts(_ posts: [Post]) {
         for post in posts {
             savePostInCoreData(post)
             managedObjectContext.saveContext()
         }
     }
     
-    public func deleteAllPosts() throws {
+    func deleteAllPosts() throws {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PostEntity")
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         try managedObjectContext.execute(batchDeleteRequest)
         managedObjectContext.saveContext()
     }
     
-    public func getPosts(offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
+    func getPosts(offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PostEntity")
         let totalCount = (try? managedObjectContext.count(for: fetchRequest)) ?? 0
         fetchRequest.fetchOffset = offset
@@ -62,7 +62,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
         return nil
     }
     
-    public func searchPosts(query: String, offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
+    func searchPosts(query: String, offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
         let request: NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
         request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", query)
 
@@ -84,7 +84,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
         return nil
     }
     
-    public func getPostDetails(postId: Int, response: @escaping ((Result<Post, Error>) -> Void)) -> Cancellable? {
+    func getPostDetails(postId: Int, response: @escaping ((Result<Post, Error>) -> Void)) -> Cancellable? {
             do {
                 let fetchRequest : NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: "itemID == %d", postId)

@@ -12,7 +12,7 @@ import DataModel
 final class ImageNetworkService: ImageRepository {
     private let queue: OperationQueue
     
-    public init(queue: OperationQueue) {
+    init(queue: OperationQueue) {
         self.queue = queue
     }
     
@@ -20,7 +20,7 @@ final class ImageNetworkService: ImageRepository {
         fatalError("Can't be initialized without required parameters")
     }
     
-    public func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
+    func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
         let operation = ImageNetworkOperation(url: url) { data in
             completion(Image(imageData: data as Data?))
         }
@@ -44,7 +44,7 @@ final class ImageNetworkOperation: Operation {
         super.init()
     }
     
-    public override func main() {
+    override func main() {
         if isCancelled { return }
         let data = try? Data(contentsOf: url)
         guard let imageData = data else {return}

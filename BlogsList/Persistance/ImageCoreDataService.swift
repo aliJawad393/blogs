@@ -14,12 +14,12 @@ final class ImageCoreDataService: ImageRepository, ImagePersistance {
     private let managedObjectContext: NSManagedObjectContext
     
     //MARK: Init
-    public init(imageStorage: ExternalDataStorage, managedObjectContext: NSManagedObjectContext) {
+    init(imageStorage: ExternalDataStorage, managedObjectContext: NSManagedObjectContext) {
         self.imageStorage = imageStorage
         self.managedObjectContext = managedObjectContext
     }
     
-    public func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
+    func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
         let fetchRequest : NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "imageUrl == %@", url.absoluteString)
         do {
@@ -36,7 +36,7 @@ final class ImageCoreDataService: ImageRepository, ImagePersistance {
         return nil
     }
     
-    public func saveImage(url: URL, data: Image) throws {
+    func saveImage(url: URL, data: Image) throws {
         if let imageData = data.imageData {
             if let filePath = try imageStorage.writeData(data: imageData) {
                 let fetchRequest : NSFetchRequest<PostEntity> = PostEntity.fetchRequest()

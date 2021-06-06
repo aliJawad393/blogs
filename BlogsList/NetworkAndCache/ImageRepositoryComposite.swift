@@ -13,7 +13,7 @@ final class ImageRepositoryComposite: ImageRepository {
         self.primarySource = primarySource
         self.secondarySource = secondarySource
     }
-    public func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
+    func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
         var cancellable: Cancellable?
         cancellable = primarySource.getImageFromURL(url: url) {[weak self] image  in
             if let _ = image.imageData {

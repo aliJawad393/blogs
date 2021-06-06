@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
-public struct PostNetwork {
+ 
+struct PostNetwork {
     public let id: Int
     public let date : String
     public let title: Title
@@ -27,11 +27,11 @@ extension PostNetwork: Decodable {
     }
 }
 
-public struct Title : Decodable {
+struct Title : Decodable {
     public let rendered : String
 }
 
-public struct Content : Decodable {
+struct Content : Decodable {
     public let rendered : String?
 
     enum CodingKeys: String, CodingKey {

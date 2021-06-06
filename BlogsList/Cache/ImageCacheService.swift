@@ -12,16 +12,16 @@ import DataModel
 final class ImageCacheService: ImageRepository, ImagePersistance {
     private let cache: NSCache<NSString, NSData>
     
-    public init(cache: NSCache<NSString, NSData>) {
+    init(cache: NSCache<NSString, NSData>) {
         self.cache = cache
     }
     
-    public func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
+    func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
         completion(Image(imageData: cache.object(forKey: url.absoluteString as NSString) as Data?))
         return nil
     }
             
-    public func saveImage(url: URL, data: Image) {
+    func saveImage(url: URL, data: Image) {
         if let imageData = data.imageData {
             cache.setObject(imageData as NSData, forKey: url.absoluteString as NSString)
         }

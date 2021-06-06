@@ -15,7 +15,7 @@ final class PostNetworkPersistanceDecorator: PostRepository {
     private let network: PostRepository
     private let persistance: PostPersistance
     
-    public init(network: PostRepository, persistance: PostPersistance) {
+    init(network: PostRepository, persistance: PostPersistance) {
         self.network = network
         self.persistance = persistance
     }

@@ -13,7 +13,7 @@ enum PersistanceError {
 
 extension PersistanceError: Error { }
 extension PersistanceError: LocalizedError {
-    public var errorDescription: String? {
+    var errorDescription: String? {
             switch self {
             case .notFound:
                 return NSLocalizedString("Query data not found", comment: "Error")

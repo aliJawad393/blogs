@@ -1,13 +1,4 @@
-//
-//  Parser.swift
-//  DataModel
-//
-//  Created by Ali Jawad on 02/05/2020.
-//  Copyright © 2020 Ali Jawad. All rights reserved.
-//
-
 import Foundation
-
 
 protocol ParserProtocol {
     func parseResponse<T : Decodable>(data: Data? , response: T.Type)->T?
@@ -16,7 +7,7 @@ protocol ParserProtocol {
 }
 
 
-class ParseManager: ParserProtocol {
+final class ParseManager: ParserProtocol {
 
     public init() {
         

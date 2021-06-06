@@ -14,7 +14,7 @@ final class ImageNetworkPersistanceDecorator: ImageRepository {
         self.imageSource = imageSource
         self.persistance = persistance
     }
-    public func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
+    func getImageFromURL(url: URL, completion: @escaping (Image) -> Void) -> Cancellable? {
         return imageSource.getImageFromURL(url: url) {[weak self] image  in
             for item in self?.persistance ?? [] {
                 DispatchQueue.global().async {
