@@ -103,7 +103,7 @@ final class BlogPostsListViewController: UIViewController {
 
 extension BlogPostsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if(indexPath.row > 0 && indexPath.row == viewModel.dataItems.value[indexPath.section].dataItems.count - 1) {
+        if(indexPath.row > 0 && (indexPath.section == viewModel.dataItems.value.count - 1) && indexPath.row == viewModel.dataItems.value[indexPath.section].dataItems.count - 1) {
             viewModel.loadMore()
         }
     }

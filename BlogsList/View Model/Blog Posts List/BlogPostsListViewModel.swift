@@ -73,7 +73,7 @@ final class BlogPostsListConcreteViewModel: BlogPostsListViewModel {
                 self.searchViewModel.search(query: searchField)
             }.store(in: &subscription)
         
-        self.networkNotifier.whenUnreachable = onNetworkUnreachable
+        self.networkNotifier.whenReachable = onNetworkReachale
         load()
     }
     
@@ -88,11 +88,13 @@ final class BlogPostsListConcreteViewModel: BlogPostsListViewModel {
     
     func loadMore() {
         if(searchText.value.count > 0) {
+            
             searchViewModel.searchMore()
         } else {
+
             let currentCount = dataItems.value.map({$0.dataItems.count}).reduce(0, +)
             if(dataItems.value.count < totalPostsCount) {
-                load(offSet: currentCount)
+                load(offSet: currentCount + 2)
             }
         }
     }
@@ -135,6 +137,7 @@ final class BlogPostsListConcreteViewModel: BlogPostsListViewModel {
                 if(recentPosts.count > 0) {
                     postsArray.append(PostsListPresenter(title: recentesTitle, dataItems: recentPosts))
                 }
+    
                 self?.dataItems.send(postsArray)
             case .failure(let error):
                 if(!((error as NSError).domain == "NSURLErrorDomain" && (error as NSError).code == -999)) {
@@ -150,7 +153,7 @@ final class BlogPostsListConcreteViewModel: BlogPostsListViewModel {
     
     func onNetworkUnreachable() {
         view?.showError(title: "Error", message: "Internet not available")
-        self.networkNotifier.whenReachable = onNetworkReachale
+        self.networkNotifier.whenUnreachable = onNetworkUnreachable
     }
 }
 

@@ -215,22 +215,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CA1CFB1D-11F4-4BD9-B906-944D2A4192B1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlogsList/Persistance/ImageCoreDataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "saveImage(url:data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C2A5D384-487B-4085-8DAF-B3F20FE94655"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -263,96 +247,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5F5FC67-D3AD-4669-A16F-445E23A399DB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlogsList/Persistance/ImageCoreDataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "getImageFromURL(url:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B0613897-C480-47E1-8565-C8FC9C73B202"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlogsList/NetworkAndCache/ImageRepositoryComposite.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "getImageFromURL(url:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B0613897-C480-47E1-8565-C8FC9C73B202 - 9b415308c376845c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BlogsList.ImageRepositoryComposite.getImageFromURL(url: Foundation.URL, completion: (DataModel.Image) -&gt; ()) -&gt; Swift.Optional&lt;DataModel.Cancellable&gt;"
-                  moduleName = "BlogsList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alijawad/iOS/BlogsList/BlogsList/NetworkAndCache/ImageRepositoryComposite.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "311">
-               </Location>
-               <Location
-                  uuid = "B0613897-C480-47E1-8565-C8FC9C73B202 - 53f74da1ae2779e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (DataModel.Image) -&gt; () in BlogsList.ImageRepositoryComposite.getImageFromURL(url: Foundation.URL, completion: (DataModel.Image) -&gt; ()) -&gt; Swift.Optional&lt;DataModel.Cancellable&gt;"
-                  moduleName = "BlogsList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alijawad/iOS/BlogsList/BlogsList/NetworkAndCache/ImageRepositoryComposite.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "266">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "55757D82-350B-48BF-B5A2-0F0E57F143ED"
+            uuid = "304F9198-2D10-4CE9-8775-64CFB5CAA6F5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlogsList/View Model/Blog Posts List/BlogPostsListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "load()"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "loadMore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5E07333E-BBD7-4454-8F8A-92C02B50A65E"
+            uuid = "55E88204-3239-40EB-95F4-51FE2AE71B8F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlogsList/Routing /Flow/FlowSignIn.swift"
+            filePath = "BlogsList/View /Blog Posts List/BlogPostsListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "start()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
