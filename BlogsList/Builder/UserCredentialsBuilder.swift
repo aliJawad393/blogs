@@ -12,8 +12,6 @@ enum CredentialsError: Equatable, Error {
     case validationFailed(String)
 }
 
-
-
 protocol CredentialsBuilder {
     mutating func setName(name: String)
     mutating func setEmail(email: String) throws

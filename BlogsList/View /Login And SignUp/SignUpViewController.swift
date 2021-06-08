@@ -42,6 +42,7 @@ final class SignUpViewController: UIViewController {
         view.setTitle("Sign Up", for: .normal)
         view.titleLabel?.font = UIFont.montserratSemiBold.withAdjustableSize(17)
         view.setTitleColor(.white, for: .normal)
+        view.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         view.addTarget(self, action: #selector(submitHandler(sender:)), for: .touchUpInside)
         return view
     }()
@@ -51,7 +52,7 @@ final class SignUpViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         view.alignment = .fill
-        view.distribution = .equalSpacing
+        view.distribution = .fill
         
         let buttonHelp = UIButton(type: .system)
         buttonHelp.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +63,7 @@ final class SignUpViewController: UIViewController {
         buttonHelp.contentHorizontalAlignment = .trailing
         
         view.addArrangedSubview(buttonSignUp)
+        view.addArrangedSubview(UIView())
         view.addArrangedSubview(buttonHelp)
         return view
     }()
@@ -304,7 +306,7 @@ private extension SignUpViewController {
             stackViewSignUp.trailingAnchor.constraint(equalTo: stackViewContent.trailingAnchor),
             
             buttonSignUp.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.049),
-            buttonSignUp.widthAnchor.constraint(equalTo: buttonSignUp.heightAnchor, multiplier: 2.775),
+            buttonSignUp.widthAnchor.constraint(equalTo: buttonSignUp.heightAnchor, multiplier: 3),
             
             stackViewSignIn.leadingAnchor.constraint(equalTo: stackViewContent.leadingAnchor),
             stackViewSignIn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55),
