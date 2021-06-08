@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import DataModel
 
 public protocol LoginDelegate {
     func loadLogInViewController(signUp: @escaping() -> (), signIn: @escaping()->())

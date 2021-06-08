@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DataModel
 
 public typealias ItemSelection = (Int)->()
 protocol ViewControllerFactory {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F16200A4266F415D004831A1 /* UserCredentialsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */; };
 		F18083D8266B49C90086F7F0 /* PostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083D7266B49C90086F7F0 /* PostNetwork.swift */; };
 		F18083DD266B50A00086F7F0 /* PersistanceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083DC266B50A00086F7F0 /* PersistanceError.swift */; };
 		F18083E2266B79D80086F7F0 /* NetworkNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083E1266B79D80086F7F0 /* NetworkNotifier.swift */; };
@@ -122,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialsBuilder.swift; sourceTree = "<group>"; };
 		F18083D7266B49C90086F7F0 /* PostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetwork.swift; sourceTree = "<group>"; };
 		F18083DC266B50A00086F7F0 /* PersistanceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceError.swift; sourceTree = "<group>"; };
 		F18083E1266B79D80086F7F0 /* NetworkNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkNotifier.swift; sourceTree = "<group>"; };
@@ -230,6 +232,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F16200A1266F414F004831A1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		F18083D0266B494B0086F7F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +536,7 @@
 		F1FE4EF0266168F8001824C9 /* BlogsList */ = {
 			isa = PBXGroup;
 			children = (
+				F16200A1266F414F004831A1 /* Builder */,
 				F180840B266BCABC0086F7F0 /* File Manager */,
 				F1B49D4D2668FD21008AF4F0 /* Cache */,
 				F1B49D4F2668FD21008AF4F0 /* Network */,
@@ -781,6 +792,7 @@
 				F1E47349266D23F40063EBCE /* NavigationControllerRouter.swift in Sources */,
 				F1B5D5382663BA830068A45C /* String+Date.swift in Sources */,
 				F1B49D8926693BDA008AF4F0 /* PostNetworkPersistanceComposite.swift in Sources */,
+				F16200A4266F415D004831A1 /* UserCredentialsBuilder.swift in Sources */,
 				F1B49D5F2668FD21008AF4F0 /* ImageCacheService.swift in Sources */,
 				F1FE4F4626616DD8001824C9 /* iOSViewControllerFactory.swift in Sources */,
 				F1AA318A266219C8008E23ED /* BlogPostsListTableViewCell.swift in Sources */,

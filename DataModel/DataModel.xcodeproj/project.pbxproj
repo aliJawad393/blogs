@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F1120EE926649B4000E60299 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1120EE826649B4000E60299 /* PostRepository.swift */; };
+		F162009C266F40BE004831A1 /* UserCrentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F162009B266F40BE004831A1 /* UserCrentials.swift */; };
 		F1B49CC52668A7B5008AF4F0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49CC42668A7B5008AF4F0 /* Image.swift */; };
 		F1B49CC92668A7E7008AF4F0 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49CC82668A7E7008AF4F0 /* ImageRepository.swift */; };
 		F1B49CD02668AA0A008AF4F0 /* CancellableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49CCF2668AA0A008AF4F0 /* CancellableTask.swift */; };
 		F1B49CD82668AB11008AF4F0 /* CancellableOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49CD72668AB11008AF4F0 /* CancellableOperation.swift */; };
 		F1B49D472668FCF3008AF4F0 /* CancellableDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49D462668FCF3008AF4F0 /* CancellableDataTask.swift */; };
-		F1B5D52C266394140068A45C /* PostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5D52B266394140068A45C /* PostNetwork.swift */; };
+		F1B5D52C266394140068A45C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5D52B266394140068A45C /* Post.swift */; };
 		F1CCF525241FA3C8007CEF2A /* DataModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCF51B241FA3C8007CEF2A /* DataModel.framework */; };
 		F1CCF52A241FA3C8007CEF2A /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCF529241FA3C8007CEF2A /* DataModelTests.swift */; };
 		F1CCF52C241FA3C8007CEF2A /* DataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F1CCF51E241FA3C8007CEF2A /* DataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,12 +32,13 @@
 
 /* Begin PBXFileReference section */
 		F1120EE826649B4000E60299 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		F162009B266F40BE004831A1 /* UserCrentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCrentials.swift; sourceTree = "<group>"; };
 		F1B49CC42668A7B5008AF4F0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F1B49CC82668A7E7008AF4F0 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		F1B49CCF2668AA0A008AF4F0 /* CancellableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableTask.swift; sourceTree = "<group>"; };
 		F1B49CD72668AB11008AF4F0 /* CancellableOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableOperation.swift; sourceTree = "<group>"; };
 		F1B49D462668FCF3008AF4F0 /* CancellableDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancellableDataTask.swift; sourceTree = "<group>"; };
-		F1B5D52B266394140068A45C /* PostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetwork.swift; sourceTree = "<group>"; };
+		F1B5D52B266394140068A45C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F1CCF51B241FA3C8007CEF2A /* DataModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CCF51E241FA3C8007CEF2A /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		F1CCF51F241FA3C8007CEF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,10 +69,11 @@
 		F12DD7FE24A5BA6C0059887A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1B5D52B266394140068A45C /* PostNetwork.swift */,
+				F1B5D52B266394140068A45C /* Post.swift */,
 				F1120EE826649B4000E60299 /* PostRepository.swift */,
 				F1B49CC42668A7B5008AF4F0 /* Image.swift */,
 				F1B49CC82668A7E7008AF4F0 /* ImageRepository.swift */,
+				F162009B266F40BE004831A1 /* UserCrentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,8 +237,9 @@
 			files = (
 				F1B49CD02668AA0A008AF4F0 /* CancellableTask.swift in Sources */,
 				F1120EE926649B4000E60299 /* PostRepository.swift in Sources */,
+				F162009C266F40BE004831A1 /* UserCrentials.swift in Sources */,
 				F1B49CD82668AB11008AF4F0 /* CancellableOperation.swift in Sources */,
-				F1B5D52C266394140068A45C /* PostNetwork.swift in Sources */,
+				F1B5D52C266394140068A45C /* Post.swift in Sources */,
 				F1B49CC92668A7E7008AF4F0 /* ImageRepository.swift in Sources */,
 				F1B49CC52668A7B5008AF4F0 /* Image.swift in Sources */,
 				F1B49D472668FCF3008AF4F0 /* CancellableDataTask.swift in Sources */,

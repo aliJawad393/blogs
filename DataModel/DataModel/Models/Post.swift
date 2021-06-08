@@ -7,35 +7,29 @@
 //
 
 import Foundation
-public struct PostNetwork {
+public struct Post {
     public let id: Int
     public let date : String
-    public let title: Title
+    public let title: String
     public let featured: Bool
     public let imageUrl: String
-    public let content: Content
-}
-
-extension PostNetwork: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case date = "date_gmt"
-        case imageUrl = "jetpack_featured_media_url"
-        case featured = "featured"
-        case title = "title"
-        case content = "content"
+    public let content: String
+    
+    public init(id: Int, date: String, title: String, featured: Bool, imageUrl: String, content: String) {
+        self.id = id
+        self.date = date
+        self.title = title
+        self.featured = featured
+        self.imageUrl = imageUrl
+        self.content = content
     }
-}
-
-public struct Title : Decodable {
-    public let rendered : String
 }
 
 public struct PostResponse {
     public let totalPosts: Int
-    public let posts: [PostNetwork]
+    public let posts: [Post]
     
-    public init(totalPosts: Int, posts: [PostNetwork]) {
+    public init(totalPosts: Int, posts: [Post]) {
         self.totalPosts = totalPosts
         self.posts = posts
     }
