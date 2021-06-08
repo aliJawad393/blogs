@@ -6,7 +6,7 @@ Platforms Supported: iPhone and iPad
 
 Modes Supported: Light Mode and Dark Mode
 
-Frameworks used: UIKit, Foundation, Comnine, CoreData
+Frameworks used: UIKit, Foundation, Combine, CoreData
 
 Architecture: Clean Architecture in which different modules are loosely coupled. MVVM is used as UI architecture.
 
