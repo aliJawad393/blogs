@@ -1,10 +1,15 @@
 # blogs
 
 Language: Swift
+
 Platforms Supported: iPhone and iPad
+
 Modes Supported: Light Mode and Dark Mode
+
 Frameworks used: UIKit, Foundation, Comnine, CoreData
+
 Architecture: Clean Architecture in which different modules are loosely coupled. MVVM is used as UI architecture.
+
 Prominant Design Patterns Used: Abstract Factory, Factory, Composite, Decorator, Repository, Builder. 
 
 App Components:
