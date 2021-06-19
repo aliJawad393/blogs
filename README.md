@@ -62,13 +62,7 @@ Strategy: BlogPostsListConcreteViewModel fetches list from network and saves to 
           Search: Each time user enters text in search bar, API request is sent to get results and load into UI. 
           Paging: Intially 50 posts are fetched from network. After user reaches to the end of loaded results, it sends request to load next 50 items.
 
-Requirement: Only UI implemented yet.
-Login/ Registration using Firebase authentication with 1 social authentication - (e.g. Google Auth).
 
-Solution:
-UI is implemented for Login and Signup. After user fills information in Signup screens and submits, input validation is performed, which either returns 
-UserCredentials struct or throws an error, if validation fails. 
-        - Design Pattern Used: Builder
         
         
 
