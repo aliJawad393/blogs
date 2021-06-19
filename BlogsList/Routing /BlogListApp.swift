@@ -8,10 +8,16 @@
 import Foundation
 
 public final class BlogListApp {
+    private let flow: Any
     
-    public static func start(flow:  FlowBlogsList) -> BlogListApp {
+    private init(flow: Any) {
+        self.flow = flow
+    }
+    
+    public static func start(delegate:  BlogPostsListDelegate) -> BlogListApp {
+        let flow = FlowBlogsList(delegate: delegate)
         flow.start()
-        return BlogListApp()
+        return BlogListApp(flow: flow)
     }
     
 }

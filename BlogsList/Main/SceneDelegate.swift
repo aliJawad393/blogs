@@ -22,8 +22,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        let flow = FlowBlogsList(delegate: BlogPostsNavigationControllerRouter(navigationController: navigationController, factory: factory))
-        app = BlogListApp.start(flow: flow)
+        app = BlogListApp.start(delegate: BlogPostsNavigationControllerRouter(navigationController: navigationController, factory: factory))
 
     }
 }

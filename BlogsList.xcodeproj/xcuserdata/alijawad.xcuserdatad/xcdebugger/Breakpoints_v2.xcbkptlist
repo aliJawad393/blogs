@@ -292,5 +292,69 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3BAC8F9-DEC1-4BA0-A7B7-381FAC69C3AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlogsList/Routing /Flow/FlowBlogsList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "init(delegate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6389BD4-4EEC-46DA-89F9-39274D6EBC68"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlogsList/Routing /Flow/FlowBlogsList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "start()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E6389BD4-4EEC-46DA-89F9-39274D6EBC68 - 556ef449c6e0c266"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BlogsList.FlowBlogsList.start() -&gt; ()"
+                  moduleName = "BlogsList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alijawad/iOS/BlogsList/BlogsList/Routing%20/Flow/FlowBlogsList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "E6389BD4-4EEC-46DA-89F9-39274D6EBC68 - 99d385767cba1a68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; () in BlogsList.FlowBlogsList.start() -&gt; ()"
+                  moduleName = "BlogsList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alijawad/iOS/BlogsList/BlogsList/Routing%20/Flow/FlowBlogsList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
