@@ -6,13 +6,11 @@
 //
 
 import Foundation
-final class FlowBlogsList: Flow {
-    var nextFlow: Flow?
+final public  class FlowBlogsList {
     private let delegate: BlogPostsListDelegate
 
-    init(delegate: BlogPostsListDelegate) {
+    public init(delegate: BlogPostsListDelegate) {
         self.delegate = delegate
-        self.nextFlow = nil
     }
     
     func start() {

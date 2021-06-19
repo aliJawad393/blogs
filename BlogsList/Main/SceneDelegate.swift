@@ -22,8 +22,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        let signInFlow = FlowSignIn(delegate: LoginNavigationControllerRouter(navigationController: navigationController, factory: factory), nextFlow: FlowBlogsList(delegate: BlogPostsNavigationControllerRouter(navigationController: navigationController, factory: factory)))
-        app = BlogListApp.start(flow: signInFlow)
+        let flow = FlowBlogsList(delegate: BlogPostsNavigationControllerRouter(navigationController: navigationController, factory: factory))
+        app = BlogListApp.start(flow: flow)
 
     }
 }

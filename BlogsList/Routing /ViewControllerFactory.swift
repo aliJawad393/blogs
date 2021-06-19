@@ -12,6 +12,4 @@ public typealias ItemSelection = (Int)->()
 protocol ViewControllerFactory {
     func blogPostsListViewController(selectionCallback:@escaping ItemSelection) -> UIViewController
     func postDetailViewController(postId: Int) -> UIViewController
-    func loginViewController(signUp: @escaping () -> (), login: @escaping()->()) -> UIViewController
-    func signUpViewController(signUpBlock: @escaping(UserCredentials)->()) -> UIViewController
 }

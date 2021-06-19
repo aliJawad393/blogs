@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F16200A4266F415D004831A1 /* UserCredentialsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */; };
 		F18083D8266B49C90086F7F0 /* PostNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083D7266B49C90086F7F0 /* PostNetwork.swift */; };
 		F18083DD266B50A00086F7F0 /* PersistanceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083DC266B50A00086F7F0 /* PersistanceError.swift */; };
 		F18083E2266B79D80086F7F0 /* NetworkNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18083E1266B79D80086F7F0 /* NetworkNotifier.swift */; };
@@ -62,14 +61,7 @@
 		F1B5D5422663C91D0068A45C /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5D5412663C91D0068A45C /* ImageCache.swift */; };
 		F1B5D54A2663EF460068A45C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5D5492663EF460068A45C /* View.swift */; };
 		F1B5D5582664070F0068A45C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5D5572664070F0068A45C /* UIViewController+Ext.swift */; };
-		F1E47314266D15870063EBCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47312266D15870063EBCE /* LoginViewController.swift */; };
-		F1E47315266D15870063EBCE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47313266D15870063EBCE /* SignUpViewController.swift */; };
-		F1E4731A266D15D60063EBCE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47319266D15D60063EBCE /* CustomTextField.swift */; };
-		F1E4732B266D17390063EBCE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4732A266D17390063EBCE /* String+Ext.swift */; };
-		F1E47331266D21260063EBCE /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47330266D21260063EBCE /* Flow.swift */; };
 		F1E47336266D21F50063EBCE /* FlowBlogsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47335266D21F50063EBCE /* FlowBlogsList.swift */; };
-		F1E4733B266D22090063EBCE /* FlowSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4733A266D22090063EBCE /* FlowSignIn.swift */; };
-		F1E47340266D22370063EBCE /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4733F266D22370063EBCE /* LoginDelegate.swift */; };
 		F1E47349266D23F40063EBCE /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E47348266D23F40063EBCE /* NavigationControllerRouter.swift */; };
 		F1FE4EF2266168F8001824C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4EF1266168F8001824C9 /* AppDelegate.swift */; };
 		F1FE4EF4266168F8001824C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4EF3266168F8001824C9 /* SceneDelegate.swift */; };
@@ -123,7 +115,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialsBuilder.swift; sourceTree = "<group>"; };
 		F18083D7266B49C90086F7F0 /* PostNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetwork.swift; sourceTree = "<group>"; };
 		F18083DC266B50A00086F7F0 /* PersistanceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceError.swift; sourceTree = "<group>"; };
 		F18083E1266B79D80086F7F0 /* NetworkNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkNotifier.swift; sourceTree = "<group>"; };
@@ -178,14 +169,7 @@
 		F1B5D5412663C91D0068A45C /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		F1B5D5492663EF460068A45C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F1B5D5572664070F0068A45C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		F1E47312266D15870063EBCE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F1E47313266D15870063EBCE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		F1E47319266D15D60063EBCE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		F1E4732A266D17390063EBCE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		F1E47330266D21260063EBCE /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		F1E47335266D21F50063EBCE /* FlowBlogsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowBlogsList.swift; sourceTree = "<group>"; };
-		F1E4733A266D22090063EBCE /* FlowSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowSignIn.swift; sourceTree = "<group>"; };
-		F1E4733F266D22370063EBCE /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
 		F1E47348266D23F40063EBCE /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		F1FE4EEE266168F8001824C9 /* BlogsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FE4EF1266168F8001824C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,14 +216,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F16200A1266F414F004831A1 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-				F16200A3266F415D004831A1 /* UserCredentialsBuilder.swift */,
-			);
-			path = Builder;
-			sourceTree = "<group>";
-		};
 		F18083D0266B494B0086F7F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +324,6 @@
 				F1B5D5372663BA830068A45C /* String+Date.swift */,
 				F1B5D5572664070F0068A45C /* UIViewController+Ext.swift */,
 				F1B49D412668FAD9008AF4F0 /* CoreData+Et.swift */,
-				F1E4732A266D17390063EBCE /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -482,22 +457,10 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		F1E47310266D15410063EBCE /* Login And SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				F1E47312266D15870063EBCE /* LoginViewController.swift */,
-				F1E47313266D15870063EBCE /* SignUpViewController.swift */,
-				F1E47319266D15D60063EBCE /* CustomTextField.swift */,
-			);
-			path = "Login And SignUp";
-			sourceTree = "<group>";
-		};
 		F1E4732F266D19A80063EBCE /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				F1E47330266D21260063EBCE /* Flow.swift */,
 				F1E47335266D21F50063EBCE /* FlowBlogsList.swift */,
-				F1E4733A266D22090063EBCE /* FlowSignIn.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -507,7 +470,6 @@
 			children = (
 				F1E47348266D23F40063EBCE /* NavigationControllerRouter.swift */,
 				F1FE4F52266179B4001824C9 /* BlogPostsListDelegate.swift */,
-				F1E4733F266D22370063EBCE /* LoginDelegate.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -536,7 +498,6 @@
 		F1FE4EF0266168F8001824C9 /* BlogsList */ = {
 			isa = PBXGroup;
 			children = (
-				F16200A1266F414F004831A1 /* Builder */,
 				F180840B266BCABC0086F7F0 /* File Manager */,
 				F1B49D4D2668FD21008AF4F0 /* Cache */,
 				F1B49D4F2668FD21008AF4F0 /* Network */,
@@ -581,7 +542,6 @@
 			isa = PBXGroup;
 			children = (
 				F1B5D5492663EF460068A45C /* View.swift */,
-				F1E47310266D15410063EBCE /* Login And SignUp */,
 				F1AA31C8266242CB008E23ED /* Post Detail */,
 				F1AA3188266219AC008E23ED /* Blog Posts List */,
 			);
@@ -783,36 +743,30 @@
 				F1B49D5D2668FD21008AF4F0 /* ImageNetworkPersistanceDecorator.swift in Sources */,
 				F18083DD266B50A00086F7F0 /* PersistanceError.swift in Sources */,
 				F18083D8266B49C90086F7F0 /* PostNetwork.swift in Sources */,
-				F1E47314266D15870063EBCE /* LoginViewController.swift in Sources */,
 				F1FE4EF6266168F8001824C9 /* BlogPostsListViewController.swift in Sources */,
-				F1E47331266D21260063EBCE /* Flow.swift in Sources */,
 				F1B49D642668FD21008AF4F0 /* Router.swift in Sources */,
 				F1B49D232668F1D1008AF4F0 /* DataModel.xcdatamodeld in Sources */,
 				F1B5D54A2663EF460068A45C /* View.swift in Sources */,
 				F1E47349266D23F40063EBCE /* NavigationControllerRouter.swift in Sources */,
 				F1B5D5382663BA830068A45C /* String+Date.swift in Sources */,
 				F1B49D8926693BDA008AF4F0 /* PostNetworkPersistanceComposite.swift in Sources */,
-				F16200A4266F415D004831A1 /* UserCredentialsBuilder.swift in Sources */,
 				F1B49D5F2668FD21008AF4F0 /* ImageCacheService.swift in Sources */,
 				F1FE4F4626616DD8001824C9 /* iOSViewControllerFactory.swift in Sources */,
 				F1AA318A266219C8008E23ED /* BlogPostsListTableViewCell.swift in Sources */,
 				F1AA31CA2662433F008E23ED /* PostDetailViewController.swift in Sources */,
 				F1B49D622668FD21008AF4F0 /* Service.swift in Sources */,
 				F1FE4F3E26616D06001824C9 /* ViewControllerFactory.swift in Sources */,
-				F1E47315266D15870063EBCE /* SignUpViewController.swift in Sources */,
 				F1B49D672668FD21008AF4F0 /* PostsRouter.swift in Sources */,
 				F1B49D652668FD21008AF4F0 /* URLRequestConvertible.swift in Sources */,
 				F1AA31BB26621C57008E23ED /* UIFont+Ext.swift in Sources */,
 				F1FE4EF2266168F8001824C9 /* AppDelegate.swift in Sources */,
 				F1E47336266D21F50063EBCE /* FlowBlogsList.swift in Sources */,
-				F1E47340266D22370063EBCE /* LoginDelegate.swift in Sources */,
 				F1B49D602668FD21008AF4F0 /* ImageNetworkService.swift in Sources */,
 				F1B49D612668FD21008AF4F0 /* PostsNetworkService.swift in Sources */,
 				F1FE4F53266179B4001824C9 /* BlogPostsListDelegate.swift in Sources */,
 				F1B49D5E2668FD21008AF4F0 /* ImageRepositoryComposite.swift in Sources */,
 				F1961B5B2667C1C70084887D /* BlogPostsListSearch.swift in Sources */,
 				F1961B6E2667F9C50084887D /* PostDetailPresenter.swift in Sources */,
-				F1E4732B266D17390063EBCE /* String+Ext.swift in Sources */,
 				F1B49D7E2669008B008AF4F0 /* PostNetworkPersistanceDecorator.swift in Sources */,
 				F1961B642667DBBA0084887D /* PostDetailViewModel.swift in Sources */,
 				F1B49D682668FD21008AF4F0 /* Parser.swift in Sources */,
@@ -823,12 +777,10 @@
 				F1961B692667F9920084887D /* PostListPresenter.swift in Sources */,
 				F1B5D5422663C91D0068A45C /* ImageCache.swift in Sources */,
 				F18083E2266B79D80086F7F0 /* NetworkNotifier.swift in Sources */,
-				F1E4733B266D22090063EBCE /* FlowSignIn.swift in Sources */,
 				F1B5D5582664070F0068A45C /* UIViewController+Ext.swift in Sources */,
 				F18083E8266B7A630086F7F0 /* NetworkReachabilityNotifier.swift in Sources */,
 				F1B49D632668FD21008AF4F0 /* Error.swift in Sources */,
 				F1FE4F4E266174AB001824C9 /* BlogListApp.swift in Sources */,
-				F1E4731A266D15D60063EBCE /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
