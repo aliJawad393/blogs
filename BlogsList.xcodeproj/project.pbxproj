@@ -68,7 +68,7 @@
 		F1FE4EF6266168F8001824C9 /* BlogPostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4EF5266168F8001824C9 /* BlogPostsListViewController.swift */; };
 		F1FE4EFE266168F9001824C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FE4EFD266168F9001824C9 /* Assets.xcassets */; };
 		F1FE4F01266168F9001824C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FE4EFF266168F9001824C9 /* LaunchScreen.storyboard */; };
-		F1FE4F0C266168FA001824C9 /* BlogsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4F0B266168FA001824C9 /* BlogsListTests.swift */; };
+		F1FE4F0C266168FA001824C9 /* PostCoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4F0B266168FA001824C9 /* PostCoreDataServiceTests.swift */; };
 		F1FE4F17266168FA001824C9 /* BlogsListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4F16266168FA001824C9 /* BlogsListUITests.swift */; };
 		F1FE4F3E26616D06001824C9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4F3D26616D06001824C9 /* ViewControllerFactory.swift */; };
 		F1FE4F4626616DD8001824C9 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FE4F4526616DD8001824C9 /* iOSViewControllerFactory.swift */; };
@@ -179,7 +179,7 @@
 		F1FE4F00266168F9001824C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1FE4F02266168F9001824C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FE4F07266168FA001824C9 /* BlogsListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogsListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1FE4F0B266168FA001824C9 /* BlogsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsListTests.swift; sourceTree = "<group>"; };
+		F1FE4F0B266168FA001824C9 /* PostCoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoreDataServiceTests.swift; sourceTree = "<group>"; };
 		F1FE4F0D266168FA001824C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FE4F12266168FA001824C9 /* BlogsListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogsListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FE4F16266168FA001824C9 /* BlogsListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsListUITests.swift; sourceTree = "<group>"; };
@@ -523,7 +523,7 @@
 		F1FE4F0A266168FA001824C9 /* BlogsListTests */ = {
 			isa = PBXGroup;
 			children = (
-				F1FE4F0B266168FA001824C9 /* BlogsListTests.swift */,
+				F1FE4F0B266168FA001824C9 /* PostCoreDataServiceTests.swift */,
 				F1FE4F0D266168FA001824C9 /* Info.plist */,
 			);
 			path = BlogsListTests;
@@ -788,7 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1FE4F0C266168FA001824C9 /* BlogsListTests.swift in Sources */,
+				F1FE4F0C266168FA001824C9 /* PostCoreDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

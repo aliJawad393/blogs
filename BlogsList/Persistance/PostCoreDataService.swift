@@ -49,7 +49,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
         do {
             if let results   = try managedObjectContext.fetch(fetchRequest) as? [PostEntity] {
                 let postsReturn = results.map {item in
-                    mapPostEntity(item: item)
+                    Post(item)
                 }
                 response(.success(PostResponse(totalPosts: totalCount > 0 ? totalCount : postsReturn.count, posts: postsReturn)))
             } else {
@@ -64,6 +64,10 @@ final class PostCoreDataService: PostRepository, PostPersistance {
     
     func searchPosts(query: String, offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
         let request: NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
+
+        guard query.count > 0 else {
+             return getPosts(offset: offset, perPage: perPage, response: response)
+        }
         request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", query)
 
         do {
@@ -72,7 +76,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
             request.fetchLimit = perPage
             let results = try managedObjectContext.fetch(request)
             let postsReturn = results.map {item in
-                mapPostEntity(item: item)
+                Post(item)
             }
             response(.success(PostResponse(totalPosts: totalCount > 0 ? totalCount : results.count, posts: postsReturn)))
 
@@ -90,7 +94,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
                 fetchRequest.predicate = NSPredicate(format: "itemID == %d", postId)
                 let fetchedResults = try managedObjectContext.fetch(fetchRequest)
                 if let item = fetchedResults.first {
-                    response(.success(mapPostEntity(item: item)))
+                    response(.success(Post(item)))
                 }
             }
             catch let error as NSError{
@@ -114,8 +118,10 @@ final class PostCoreDataService: PostRepository, PostPersistance {
         newPost.featured = post.featured
         newPost.postDescription = post.content
     }
-    
-    private func mapPostEntity(item: PostEntity) -> Post {
-        return Post(id: Int(item.itemID), date: item.date ?? "", title: item.title ?? "", featured: item.featured, imageUrl: item.imageUrl ?? "", content: item.postDescription ?? "")
+}
+
+private extension Post {
+    init(_ item: PostEntity) {
+         self = Post(id: Int(item.itemID), date: item.date ?? "", title: item.title ?? "", featured: item.featured, imageUrl: item.imageUrl ?? "", content: item.postDescription ?? "")
     }
 }
