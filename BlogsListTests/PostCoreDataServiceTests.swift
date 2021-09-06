@@ -32,7 +32,7 @@ class PostCoreDataServiceTests: XCTestCase {
     func test_savePosts_addsMultipleEntriesInTable() {
         let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
         XCTAssert(assertPostsCount(expectedCount: 0))
-        sut.savePosts([createPost(withId: 0), createPost(withId: 1), createPost(withId: 2)])
+        sut.savePosts(createPosts(noOfPosts: 3))
         XCTAssert(assertPostsCount(expectedCount: 3))
 
     }
@@ -48,6 +48,112 @@ class PostCoreDataServiceTests: XCTestCase {
             case .success(let posts):
                 XCTAssertTrue(posts.posts.count == 1)
                 XCTAssertTrue(posts.posts[0].id == 1)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsAsPerSizePageWhenTotalMoreThanPageSize() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 10))
+        let expect = expectation(description: "returns as per pageSize when total more than pageSize")
+
+        _ = sut.getPosts(offset: 0, perPage: 5) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts.count == 5)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsAllWhenTotalLessThanPageSize() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 5))
+        let expect = expectation(description: "returns all when total less than pageSize")
+
+        _ = sut.getPosts(offset: 0, perPage: 10) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts.count == 5)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsFirstPostToPageSizeWhenOffsetZero() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 5))
+        let expect = expectation(description: "returns first post when offset Zero")
+        _ = sut.getPosts(offset: 0, perPage: 5) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts[0].id == 0)
+                XCTAssertTrue(posts.posts.last?.id == 4)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsPostsAfterOffset() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 10))
+        let expect = expectation(description: "returns posts after offset")
+        _ = sut.getPosts(offset: 5, perPage: 5) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts.first?.id == 5)
+                XCTAssertTrue(posts.posts.last?.id == 9)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsEmptyWhenOffSetEqualTotalPosts() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 5))
+        let expect = expectation(description: "returns empty when offSet equal to total posts")
+        _ = sut.getPosts(offset: 5, perPage: 5) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts.isEmpty)
+            case .failure(_):
+                XCTFail()
+            }
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 2)
+    }
+    
+    func test_getPosts_returnsEmptyWhenOffSetGreaterThanTotalPosts() {
+        let sut = PostCoreDataService(managedObjectContext: persistentContainer.viewContext)
+        sut.savePosts(createPosts(noOfPosts: 5))
+        let expect = expectation(description: "returns empty when offSet greater than total posts")
+        _ = sut.getPosts(offset: 6, perPage: 5) {response in
+            switch response {
+            case .success(let posts):
+                XCTAssertTrue(posts.posts.isEmpty)
             case .failure(_):
                 XCTFail()
             }
@@ -172,6 +278,15 @@ class PostCoreDataServiceTests: XCTestCase {
     
     private func createPost(withId id: Int, title: String = "tem") -> Post {
         Post(id: id, date: "12/11", title: title, featured: true, imageUrl: "http:temm", content: "Tem content")
+    }
+    
+    private func createPosts(noOfPosts: Int) -> [Post] {
+        var posts = [Post]()
+        for index in 0...(noOfPosts - 1) {
+            posts.append(createPost(withId: index))
+        }
+        
+        return posts
     }
     
     private func flushData() {

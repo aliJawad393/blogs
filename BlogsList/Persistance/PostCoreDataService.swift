@@ -29,8 +29,8 @@ final class PostCoreDataService: PostRepository, PostPersistance {
     func savePosts(_ posts: [Post]) {
         for post in posts {
             savePostInCoreData(post)
-            managedObjectContext.saveContext()
         }
+        managedObjectContext.saveContext()
     }
     
     func deleteAllPosts() throws {
@@ -42,6 +42,7 @@ final class PostCoreDataService: PostRepository, PostPersistance {
     
     func getPosts(offset: Int, perPage: Int, response: @escaping ((Result<PostResponse, Error>) -> Void)) -> Cancellable? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PostEntity")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "itemID", ascending: true)]
         let totalCount = (try? managedObjectContext.count(for: fetchRequest)) ?? 0
         fetchRequest.fetchOffset = offset
         fetchRequest.fetchLimit = perPage
